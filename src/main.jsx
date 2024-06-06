@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/main.css";
 import "./assets/styles/project.css";
 
+
 // Bringing in the pages the router will use to conditionally show the appropriate views
 import App from "./components/App";
 import AboutMe from "./components/pages/AboutMe";

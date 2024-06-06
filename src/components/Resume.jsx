@@ -7,13 +7,15 @@ function Resume() {
     "Node.js",
     "CSS",
     "HTML",
+    "SQL",
+    "Mongo"
     // Add more as needed
   ];
 
   return (
     <section>
       <h2>Resume</h2>
-      <a href="path-to-resume.pdf" download>
+      <a href="path-to-resume." download>
         Download Resume
       </a>
       <h3>Proficiencies</h3>

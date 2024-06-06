@@ -24,12 +24,12 @@ const { data } =  localStorage.getItem
   return (
     <>
       <div>
-        {/* Conditionally render the full profile or a Loading string, depending on whether user data is available */}
+        
        <Contact/>
       </div>
       <footer className="profile-footer">
         {/* Link the user back to the homepage. The to prop is used in place of an href */}
-        <Link to="/">← Go Back</Link>
+        < Link to="/">← Go Back</Link>
       </footer>
     </>
   );
