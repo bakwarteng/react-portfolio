@@ -1,82 +1,83 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
+
+export default
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // Create state variables for the fields in the form
+  // We are also setting their initial values to an empty string
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    message: false,
-  });
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleBlur = (e) => {
-    const { name, value } = e.target;
-    if (!value) {
-      setErrors({ ...errors, [name]: true });
+    // Based on the input type, we set the state of either email, username, and password
+    {
+    } if (inputType === "name") {
+      setName(inputValue);
     } else {
-      setErrors({ ...errors, [name]: false });
+      setEmail(inputValue);
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
-    // Add form submission logic here
-    console.log("Form submitted:", formData);
+
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email) || !name) {
+      setErrorMessage("Email or name is invalid");
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+   
+    
+
+    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    setName("");
+  ;
+    setEmail("");
   };
 
   return (
-    <section>
-      <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.name && <span className="error">This field is required</span>}
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.email && (
-            <span className="error">This field is required</span>
-          )}
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.message && (
-            <span className="error">This field is required</span>
-          )}
-        </div>
+    <div className="container text-center">
+      <h1>Hello</h1>
+      <form className="form" onSubmit={handleFormSubmit}>
+        <input
+          value={email}
+          name="email"
+          onChange={handleInputChange}
+          type="email"
+          placeholder="email"
+          required
+        />
+        <input
+          value={name}
+          name="name"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Enter name"
+          required
+        />
+        <textarea name="message" id="message" rows= "5" required>
+
+        </textarea>
+       
+        
         <button type="submit">Submit</button>
       </form>
-    </section>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
+    </div>
   );
-}
 
-export default Contact;
+
+}
