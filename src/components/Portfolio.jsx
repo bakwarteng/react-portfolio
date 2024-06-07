@@ -52,11 +52,11 @@ function Portfolio() {
 
   return (
     <section>
-      <h2>Portfolio</h2>
-      <div className="portfolio-grid">
+      <h2  className="portheader">Portfolio</h2>
+      <div className="col-12 text-center">
         {projects.map((project, index) => (
-          <div key={index} className="portfolio-item">
-            <img src={project.image} alt={project.title} className="portimages" />
+          <div key={index}  className="portfolio-item">
+            <img  src={project.image} alt={project.title} className="portimages" />
             <h3>{project.title}</h3>
             <a
               href={project.deployedLink}

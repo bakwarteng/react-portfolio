@@ -1,4 +1,6 @@
 import { useState } from "react";
+import style from "../assets/styles/main.css"
+
 
 
 export default
@@ -46,17 +48,19 @@ function Contact() {
 
   return (
     <div className="container text-center">
-      <h1>Hello</h1>
+      <h1>Contact Me Here</h1>
       <form className="form" onSubmit={handleFormSubmit}>
-        <input
+        <input className="emailinput"
           value={email}
           name="email"
           onChange={handleInputChange}
           type="email"
-          placeholder="email"
+          placeholder="Email"
           required
-        />
-        <input
+        /> 
+        
+      
+        <input className="label"
           value={name}
           name="name"
           onChange={handleInputChange}
@@ -64,11 +68,8 @@ function Contact() {
           placeholder="Enter name"
           required
         />
-        <textarea name="message" id="message" rows= "5" required>
+        <textarea className="textarea" name="message" id="message" rows="5" required></textarea>
 
-        </textarea>
-       
-        
         <button type="submit">Submit</button>
       </form>
       {errorMessage && (

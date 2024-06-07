@@ -1,17 +1,19 @@
 import React from "react";
-
+import style from "../assets/styles/main.css"
 
 const Header = () => {
   const headerStyle = {
-    backgroundColor: "pink",
+    backgroundColor: "rgb(250, 178, 172)",
     padding: "20px",
     textAlign: "center",
   };
+  
+  
 
   return (
     <header style={headerStyle}>
-      <h1>Beth-Ann's Portfolio </h1>
-
+      <h1 >Beth-Ann's Portfolio </h1>
+     
     </header>
   );
 

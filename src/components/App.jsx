@@ -1,17 +1,20 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import style from "../assets/styles/main.css"
 
 import React from "react";
 import AboutMe from "./pages/AboutMe";
 import Footer from "./Footer";
-// import "./App.css"
 
-// import Header from './Header';
 
 const App = () => {
   return (
-    <div>
+     
+    <div className="appbody">
+     
+        
+      
       <Header />
 
       <ul className="nav justify-content-center">
@@ -36,10 +39,15 @@ const App = () => {
           </Link>
         </li>
       </ul>
+     <card className="inbetween">
+      
 <Outlet/>
-  
+  </card>
       <Footer />
-    </div>
+      
+        
+      
+      </div>
   );
 };
 

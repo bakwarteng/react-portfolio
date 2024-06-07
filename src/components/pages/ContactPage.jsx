@@ -12,7 +12,7 @@ export default function ContactPage() {
   const { id } = useParams();
 
   const fetchData = () => {
-    // const { data } = await API.getSingleUser(id);
+ 
 const { data } =  localStorage.getItem
     setUser(data);
   };
@@ -21,12 +21,14 @@ const { data } =  localStorage.getItem
     fetchData();
   }, []);
 
+
   return (
     <>
       <div>
         
        <Contact/>
       </div>
+    
       <footer className="profile-footer">
         {/* Link the user back to the homepage. The to prop is used in place of an href */}
         < Link to="/">← Go Back</Link>
@@ -34,3 +36,4 @@ const { data } =  localStorage.getItem
     </>
   );
 }
+
