@@ -1,0 +1,21 @@
+.portcontent{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items:center ;
+
+    
+}
+.portcards{
+    display:flex;
+    padding: 10px;
+    border: solid;
+  border: 5px solid;
+    border-color: pink ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
