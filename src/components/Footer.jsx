@@ -8,11 +8,10 @@ import React from "react";
    position: "fixed",
    bottom: "0",
    width: "100%",    
-   maxHeight:"42px",
+   maxHeight:"41px",
    
 
     backgroundColor: "rgb(250, 178, 172)",
-    fontWeight: "bolder",
     textAlign: "center",
     
   };

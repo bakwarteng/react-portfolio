@@ -34,4 +34,4 @@ If you have any questions, feel free to reach out:
 
 ## Screenshot
 
-![alt text](<Screenshot 2024-06-07 183631.png>)
+![alt text](portfolio-screenshot.png)
