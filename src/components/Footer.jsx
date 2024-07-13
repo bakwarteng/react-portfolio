@@ -5,23 +5,21 @@ import React from "react";
 
   const footerStyle = {
   
-    position: "fixed",
-    bottom: "0",
-    alignContent: "center",
-    width: "100%",
+   position: "fixed",
+   bottom: "0",
+   width: "100%",    
+   maxHeight:"42px",
+   
 
     backgroundColor: "rgb(250, 178, 172)",
     fontWeight: "bolder",
-    textColor: "white",
     textAlign: "center",
-    padding: "1px",
+    
   };
 
 function Footer() {
   return (
-    <div>
-      
-
+    <div className="d-flex align-content-stretch flex-wrap">
       <footer style={footerStyle}>
         <a
           className="footerlinks"

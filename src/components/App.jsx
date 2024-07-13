@@ -10,11 +10,8 @@ import Footer from "./Footer";
 
 const App = () => {
   return (
-     
+    <section>
     <div className="appbody">
-     
-        
-      
       <Header />
 
       <ul className="nav justify-content-center">
@@ -39,15 +36,16 @@ const App = () => {
           </Link>
         </li>
       </ul>
-     <card className="inbetween">
-      
-<Outlet/>
-  </card>
+      <card className="inbetween">
+        <Outlet />
+      </card>
+    <div>
+
       <Footer />
       
-        
-      
       </div>
+    </div>
+    </section>
   );
 };
 
