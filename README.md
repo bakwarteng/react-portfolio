@@ -18,7 +18,7 @@ To run this project locally, you can follow these steps:
 3. Run `npm start` to start the development server.
 
 ## Usage
-You can view the deployed application [here](link_to_deployed_application).
+You can view the deployed application [here](https://main--beth-annportfolio.netlify.app/).
 
 ## License
 This project is licensed under the MIT License. [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
